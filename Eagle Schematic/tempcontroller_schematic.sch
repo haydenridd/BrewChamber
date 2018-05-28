@@ -813,6 +813,41 @@ It has reduced top mask to make it harder to put the component on the wrong side
 <circle x="0" y="0" radius="0.40160625" width="0" layer="29"/>
 <circle x="2.54" y="0" radius="0.40160625" width="0" layer="29"/>
 </package>
+<package name="0603-ARV">
+<description>&lt;b&gt;Chip Resistor Array&lt;/b&gt; size 4 × 0603&lt;p&gt;
+convex termination - Phycomp Components&lt;br&gt;
+Source: RS Components</description>
+<wire x1="-1.55" y1="0.45" x2="1.55" y2="0.45" width="0.1016" layer="51"/>
+<wire x1="1.55" y1="0.45" x2="1.55" y2="-0.45" width="0.1016" layer="51"/>
+<wire x1="-1.55" y1="-0.45" x2="-1.55" y2="0.45" width="0.1016" layer="51"/>
+<wire x1="1.55" y1="-0.45" x2="-1.55" y2="-0.45" width="0.1016" layer="51"/>
+<smd name="1" x="-1.2" y="-0.625" dx="0.5" dy="0.65" layer="1"/>
+<smd name="2" x="-0.4" y="-0.625" dx="0.5" dy="0.65" layer="1"/>
+<smd name="3" x="0.4" y="-0.625" dx="0.5" dy="0.65" layer="1"/>
+<smd name="4" x="1.2" y="-0.625" dx="0.5" dy="0.65" layer="1"/>
+<smd name="5" x="1.2" y="0.625" dx="0.5" dy="0.65" layer="1"/>
+<smd name="6" x="0.4" y="0.625" dx="0.5" dy="0.65" layer="1"/>
+<smd name="7" x="-0.4" y="0.625" dx="0.5" dy="0.65" layer="1"/>
+<smd name="8" x="-1.2" y="0.625" dx="0.5" dy="0.65" layer="1"/>
+<text x="-1.905" y="-2.54" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-1.905" y="1.27" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="-1.6" y1="0.7" x2="-0.9" y2="0.8" layer="51"/>
+<rectangle x1="-0.7" y1="0.7" x2="-0.1" y2="0.8" layer="51"/>
+<rectangle x1="0.1" y1="0.7" x2="0.7" y2="0.8" layer="51"/>
+<rectangle x1="0.9" y1="0.7" x2="1.6" y2="0.8" layer="51"/>
+<rectangle x1="-1.5" y1="0.5" x2="-0.95" y2="0.7" layer="51"/>
+<rectangle x1="-0.65" y1="0.5" x2="-0.15" y2="0.7" layer="51"/>
+<rectangle x1="0.15" y1="0.5" x2="0.65" y2="0.7" layer="51"/>
+<rectangle x1="0.95" y1="0.5" x2="1.5" y2="0.7" layer="51"/>
+<rectangle x1="0.9" y1="-0.8" x2="1.6" y2="-0.7" layer="51"/>
+<rectangle x1="0.1" y1="-0.8" x2="0.7" y2="-0.7" layer="51"/>
+<rectangle x1="-0.7" y1="-0.8" x2="-0.1" y2="-0.7" layer="51"/>
+<rectangle x1="-1.6" y1="-0.8" x2="-0.9" y2="-0.7" layer="51"/>
+<rectangle x1="0.95" y1="-0.7" x2="1.5" y2="-0.5" layer="51"/>
+<rectangle x1="0.15" y1="-0.7" x2="0.65" y2="-0.5" layer="51"/>
+<rectangle x1="-0.65" y1="-0.7" x2="-0.15" y2="-0.5" layer="51"/>
+<rectangle x1="-1.5" y1="-0.7" x2="-0.95" y2="-0.5" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="RESISTOR">
@@ -839,6 +874,25 @@ It has reduced top mask to make it harder to put the component on the wrong side
 <rectangle x1="-2.032" y1="1.524" x2="2.032" y2="2.032" layer="94"/>
 <pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="2" x="0" y="-2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+</symbol>
+<symbol name="POTENTIOMETER">
+<wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="-0.889" y1="1.016" x2="-0.254" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="-0.254" y1="-1.016" x2="0.381" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="0.381" y1="1.016" x2="1.016" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="1.016" y1="-1.016" x2="1.651" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="1.651" y1="1.016" x2="2.286" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="2.286" y1="-1.016" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<text x="-3.81" y="-3.5814" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.81" y="-5.842" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.016" x2="0.254" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.016" x2="-0.254" y2="1.524" width="0.1524" layer="94"/>
+<pin name="P$1" x="0" y="5.08" visible="off" length="short" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1105,6 +1159,23 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="POTENTIOMETER" prefix="R">
+<gates>
+<gate name="G$1" symbol="POTENTIOMETER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="0603-ARV">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="P$1" pad="3 4 5 6 7 8"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -4276,6 +4347,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="RELAY_5VCOIL_120VAC" library="SparkFun-Electromechanical" deviceset="RELAY" device="PTH"/>
 <part name="SCREW_TERMINAL_120VAC_HOT" library="SparkFun-Connectors" deviceset="M02" device="POLAR"/>
 <part name="FRAME2" library="frames" deviceset="FRAME_A_L" device=""/>
+<part name="TEMP_CONTROL_POT" library="SparkFun-Passives" deviceset="POTENTIOMETER" device="" value="100K"/>
 </parts>
 <sheets>
 <sheet>
@@ -4293,6 +4365,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="149.86" y1="-35.56" x2="17.78" y2="-35.56" width="0.1524" layer="94" style="shortdash"/>
 <text x="53.34" y="-107.442" size="3.81" layer="94" font="vector">Hayden Riddiford</text>
 <text x="141.224" y="-128.27" size="3.81" layer="94" font="vector">0</text>
+<text x="-76.2" y="-96.52" size="3.81" layer="94">Temperature Control</text>
+<wire x1="17.78" y1="-35.56" x2="17.78" y2="-134.62" width="0.1524" layer="94" style="shortdash"/>
 </plain>
 <instances>
 <instance part="ATTINY85" gate="G$1" x="86.36" y="58.42" smashed="yes">
@@ -4328,6 +4402,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </instance>
 <instance part="FRAME2" gate="G$1" x="-124.46" y="-134.62"/>
 <instance part="FRAME2" gate="G$2" x="48.26" y="-134.62"/>
+<instance part="TEMP_CONTROL_POT" gate="G$1" x="-58.42" y="-76.2" smashed="yes" rot="R90">
+<attribute name="NAME" x="-54.61" y="-74.7014" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-54.61" y="-79.502" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -4362,6 +4440,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="ATTINY85" gate="G$1" pin="VCC"/>
 <wire x1="71.12" y1="66.04" x2="68.58" y2="66.04" width="0.1524" layer="91"/>
 <label x="68.58" y="66.04" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="TEMP_CONTROL_POT" gate="G$1" pin="2"/>
+<wire x1="-58.42" y1="-71.12" x2="-58.42" y2="-68.58" width="0.1524" layer="91"/>
+<label x="-58.42" y="-68.58" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -4412,6 +4495,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="ATTINY85" gate="G$1" pin="GND"/>
 <wire x1="71.12" y1="53.34" x2="68.58" y2="53.34" width="0.1524" layer="91"/>
 <label x="68.58" y="53.34" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="TEMP_CONTROL_POT" gate="G$1" pin="1"/>
+<wire x1="-58.42" y1="-81.28" x2="-58.42" y2="-83.82" width="0.1524" layer="91"/>
+<label x="-58.42" y="-83.82" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -4499,6 +4587,18 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="91.44" y1="5.08" x2="91.44" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="RELAY_5VCOIL_120VAC" gate="K$1" pin="NO"/>
 <wire x1="91.44" y1="2.54" x2="86.36" y2="2.54" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="TEMP_CTRL" class="0">
+<segment>
+<pinref part="ATTINY85" gate="G$1" pin="PB4(ADC2)"/>
+<wire x1="99.06" y1="55.88" x2="101.6" y2="55.88" width="0.1524" layer="91"/>
+<label x="101.6" y="55.88" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="TEMP_CONTROL_POT" gate="G$1" pin="P$1"/>
+<wire x1="-63.5" y1="-76.2" x2="-66.04" y2="-76.2" width="0.1524" layer="91"/>
+<label x="-66.04" y="-76.2" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>

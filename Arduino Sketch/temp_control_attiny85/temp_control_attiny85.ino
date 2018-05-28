@@ -9,14 +9,17 @@ enum tempStates {
 };
 
 enum tempStates temp_mode = OFF_RISE;
-#define RISING_THRESH 729
-#define FALLING_THRESH 724
 #define NPT_AVG 16 // must be a 2^X value
+
+int RISING_THRESH = 729;
+int FALLING_THRESH = RISING_THRESH - 5;
 int relayDriver_p = 0;
 int tempSense_p = A1;
+int tempCtrl_p = A2;
 // int swPin = 1;
 int temp_voltage_avg;
 int temp_voltage_arr[NPT_AVG];
+int temp_ctrl_val;
 int counter = 0;
 int sw_mode = 0;
 int num_bit_shift = 1;
@@ -26,7 +29,9 @@ void setup() {
   
   // initialize digital pin 0 as a pwm output.
   pinMode(relayDriver_p, OUTPUT);
+  // initialize analog pin 1, 2 as input 
   pinMode(tempSense_p, INPUT);
+  pinMode(tempCtrl_p, INPUT);
     
   while( test_bit_shift != 2) {
     test_bit_shift = test_bit_shift >> 1;
@@ -42,10 +47,13 @@ void loop() {
   {
     temp_voltage_arr[counter] = analogRead(tempSense_p);
     counter++;
+    delay(500);
   }
   else
   {
     TempAvgUpdate();
+    UpdateThresholds();
+    
     switch (temp_mode) {
       
       case OFF_RISE:
@@ -53,7 +61,6 @@ void loop() {
         {
           digitalWrite(relayDriver_p, HIGH);
           temp_mode = ON;
-          delay(5000);
         }
       break;
           
@@ -62,7 +69,6 @@ void loop() {
         {
           digitalWrite(relayDriver_p, LOW);
           temp_mode = OFF_FALL;
-          delay(5000);
         }
       break;
       
@@ -71,11 +77,12 @@ void loop() {
         {
           digitalWrite(relayDriver_p, HIGH);
           temp_mode = ON;
-          delay(5000);
         }
       break;
 
     }
+
+    delay(5000);
   }
   delay(10);
 }
@@ -89,8 +96,12 @@ void TempAvgUpdate() {
   temp_voltage_arr[0] = analogRead(tempSense_p);
   temp_voltage_avg += temp_voltage_arr[0];
   temp_voltage_avg = temp_voltage_avg >> num_bit_shift;
+}
 
-  
+void UpdateThresholds() {
+  temp_ctrl_val = analogRead(tempCtrl_p);
+  RISING_THRESH = 695 + int(temp_ctrl_val/26);
+  FALLING_THRESH = RISING_THRESH - 5;
 }
 
 
